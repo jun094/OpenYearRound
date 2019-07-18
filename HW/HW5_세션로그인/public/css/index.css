@@ -1,0 +1,284 @@
+
+  html,
+  body {
+    width: 992px;
+    margin: 0 auto;
+    background-color: rgb(245, 245, 245);
+    text-align: center;
+  }
+
+
+  #outside {
+    background-color: rgb(245, 245, 245);
+    margin: 30px 0px 0px;
+    padding: 0px 0px 44px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #footer {
+    margin-bottom: 30px;
+  }
+
+
+  .iphone-back-image {
+    background-image: url("https://www.instagram.com/static/images/homepage/home-phones.png/43cc71bb1b43.png");
+    width: 450px;
+    height: 620px;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 80px 15px 0px 35px;
+  }
+
+  .iphone-front-image {
+    position: absolute;
+
+  }
+
+  .iphone-front-image img {
+    position: absolute;
+    left: 149px;
+    top: 100px;
+  }
+
+  .article1 {
+    display: block;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    border: 2px solid #EFEFEF;
+    width: 350px;
+    height: 561px;
+    margin: 10px 0px 10px;
+    padding: 10px 0px;
+  }
+
+  #logo {
+    text-align: center;
+    font-size: 20px;
+    width: 175px;
+    height: 51px;
+    margin: 22px 86px 12px;
+
+    font-size: 14px;
+  }
+
+  #ment1 h2 {
+    text-align: center;
+    width: 268px;
+    height: 40px;
+    margin: 0px 40px 10px;
+
+    font-size: 17px;
+    color: #999999;
+  }
+
+  .facebook-button {
+    cursor: pointer;
+    width: 268px;
+    height: 31px;
+    background-color: #3897F0;
+    margin: 10px;
+    padding: 0;
+    border-radius: 5px;
+    border: 0px;
+    padding: 5px 9px;
+  }
+
+  .facebook-button img {
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    display: inline;
+  }
+
+  .facebook-button p {
+
+    color: white;
+    font-size: 14px;
+    display: inline;
+  }
+
+
+  #or {
+    width: 268px;
+    height: 14px;
+    margin: 10px 40px 18px;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.5fr;
+  }
+
+  #or p {
+    display: inline;
+    color: #999999;
+    font-size: 13px;
+    margin: 0px 18px;
+  }
+
+  #hr {
+    border-top: 1px solid #EFEFEF;
+    margin-top: 7px;
+  }
+
+  #input-css {
+    margin-bottom: 10px;
+  }
+
+  #input-css input {
+    width: 268px;
+    height: 38px;
+    border-radius: 5px;
+    border: 1px solid #EFEFEF;
+    background-color: #FAFAFA;
+    color: gray;
+
+    font-size: 11px;
+  }
+
+  #login-button {
+    cursor: pointer;
+    margin: 10px;
+    width: 268px;
+    height: 31px;
+    background-color: #3897F0;
+    padding: 5px 9px;
+    border-radius: 5px;
+    border: 0px;
+    font-size: 14px;
+
+    font-size: 14px;
+    color: white;
+  }
+
+
+
+  #ment2 {
+    margin: 10px 60px;
+  }
+
+  #ment2 p {
+    color: #999999;
+    font-size: 14px;
+  }
+
+  #ment2 a {
+    text-decoration: none;
+    color: rgb(145, 145, 145);
+  }
+
+  .article2 {
+    display: block;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    border: 1px solid #EFEFEF;
+    width: 350px;
+    height: 50px;
+    margin: 0px 0px 10px;
+    padding: 10px 0px;
+  }
+
+  .article2 p {
+    font-size: 14px;
+  }
+
+  .article2 a {
+    color: blue;
+    text-decoration: none;
+  }
+
+
+  .article3 {
+
+    width: 350px;
+    height: 101px;
+    text-align: center;
+  }
+
+  #down-img {
+    display: -webkit-flex;
+    /* Safari */
+    display: flex;
+    justify-content: center;
+    width: 350px;
+    margin: 0px auto;
+  }
+
+  #down-img img {
+    cursor: pointer;
+    height: 40px;
+    margin: 10px 5px;
+  }
+
+
+
+  #footer-menu {
+    font-size: 12px;
+    color: #003569;
+    float: left;
+    padding-left: 20px;
+  }
+
+  #footer-menu a:link {
+    text-decoration: none;
+  }
+
+  #footer-menu select {
+    display: inline;
+    /* 네이티브 외형 감추기 */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-size: 12px;
+    color: #003569;
+    border: none;
+    background-color: rgb(245, 245, 245);
+  }
+
+  #footer-copyright {
+    font-size: 12px;
+    color: gray;
+    padding-right: 20px;
+    float: right;
+  }
+
+  @media(max-width:800px) {
+
+    html,
+    body {
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    #outside {
+      display: block;
+
+    }
+
+    .article1 {
+      margin: 10px auto;
+    }
+
+    .article2 {
+      margin: 10px auto;
+    }
+
+    .article3 {
+      margin: 10px auto;
+    }
+
+    .left {
+      display: none;
+    }
+
+
+    #footer-menu {
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    #footer-copyright {
+      font-size: 12px;
+      color: gray;
+      padding-right: 20px;
+      float: none;
+    }
+  }

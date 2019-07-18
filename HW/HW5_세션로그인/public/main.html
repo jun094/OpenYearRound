@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>instagramFeed_jun</title>
+  <link rel="stylesheet" href="css/main.css" />
+
+</head>
+
+
+<body>
+
+  <div id="bodycheck" onclick="bodyclick()"></div>
+
+  <div id="more">
+    <button class="more_top" style="color:red">부적절한 콘텐츠 신고</button>
+    <button class="more_middle" style="color:red">팔로우 취소</button>
+    <button class="more_middle">게시물로 이동</button>
+    <button class="more_middle">퍼가기</button>
+    <button class="more_middle">공유하기</button>
+    <button class="more_middle">링크 복사하기</button>
+    <button onclick="alert()" class="more_bottom">취소</button>
+  </div>
+
+  <div id="blackOpacity">
+    <nav class="bar">
+      <div class="bar_contents">
+        <div class="insta_logo">
+          <a href="">
+            <div id="insta_logo_png"> </div>
+          </a>
+          <div id="insta_logo_hrizon"> </div>
+          <a href="">
+            <div id="insta_logo"> </div>
+          </a>
+        </div>
+        <div class="find_text">
+          <input id="TextFind" tpye="text" placeholder="검색" onclick="changeTextFind()" onblur="changeTextFind()" />
+        </div>
+        <div class="bar_logoes">
+          <img src="img/find.png" />
+          <img src="img/like.png" />
+          <a href="profile.html"><img src="img/profile.png" /></a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <ul id="slider">
+        <!-- 자바스크립트 feed 반복문 -->
+      </ul>
+    </div>
+
+  </div>
+</body>
+<script src = "js/main.js"></script>
+</html>

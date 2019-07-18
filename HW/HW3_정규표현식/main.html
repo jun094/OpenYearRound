@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>instagramFeed_jun</title>
+  <style>
+    body {
+      margin-top: 0;
+
+      margin-left: 0;
+      margin-right: 0;
+      background-color: rgb(250, 250, 250);
+    }
+
+    nav {
+      border: none;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    #blackOpacity {
+      padding-top: 120px;
+    }
+
+    .bar {
+      position: fixed;
+      top: 0;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 77px;
+      background-color: white;
+      border-bottom: 1.5px solid rgb(235, 235, 235);
+      border-radius: 4px;
+    }
+
+    .bar_contents {
+      margin: 0 auto;
+      max-width: 1010px;
+
+      /* width: 990px; */
+      padding: 26px 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .insta_logo {
+      display: flex;
+      float: left;
+    }
+
+    #insta_logo_png {
+      cursor: pointer;
+      display: flex;
+      width: 24px;
+      height: 24px;
+      background-image: url("img/instagram-logo.png");
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+    }
+
+    #insta_logo_hrizon {
+      display: block;
+      border-right: 0.5px solid black;
+      width: 24px;
+      height: 24px;
+    }
+
+    #insta_logo {
+      cursor: pointer;
+      display: block;
+      margin-left: 15px;
+      width: 103px;
+      height: 29px;
+      background-image: url("img/instagram.png");
+      background-size: cover;
+    }
+
+    .find_text {
+      display: block;
+      text-align: center;
+    }
+
+    #TextFind {
+      width: 199px;
+      height: 18px;
+      border-radius: 3px;
+      border: 0.5px solid #EFEFEF;
+      background-color: #fcf7f7;
+      color: #999999;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .bar_logoes {
+      text-align: center;
+      display: inline;
+
+    }
+
+    .bar_logoes img {
+      cursor: pointer;
+      width: 24px;
+      height: 24px;
+      margin-left: 24px;
+      float: right;
+    }
+
+
+    /* 피드 */
+    .feed {
+
+
+      margin: 50px auto;
+      width: 614px;
+      border-radius: 3px;
+      border: 1.5px solid rgb(235, 235, 235);
+      border-radius: 4px;
+      background-color: white;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    /* 피드헤더 */
+    .feed_header {
+      padding: 16px;
+      border-bottom: 2.2px solid rgb(235, 235, 235);
+      border-radius: 4px;
+    }
+
+    .feed_header_profile {}
+
+    .feed_header_profile a {
+      vertical-align: middle;
+      text-decoration: none;
+      font-size: 14px;
+      color: #262626;
+      padding-left: 5px;
+    }
+
+    .feed_header_profile img {
+      cursor: pointer;
+      vertical-align: middle;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+    }
+
+    #feed_header_more {
+      cursor: pointer;
+      float: right;
+      width: 24px;
+      height: 24px;
+      vertical-align: middle;
+    }
+
+    /* 이미지 및 icon들 */
+    .photo img {
+      vertical-align: bottom;
+      width: 614px;
+    }
+
+    .icon {
+      margin: 4px 0px 0px;
+      padding: 0 16px;
+    }
+
+    .icon_left button {
+      width: 40px;
+      height: 40px;
+      background-color: white;
+      border: none;
+    }
+
+    .icon_left img {
+      cursor: pointer;
+      width: 24px;
+      height: 24px;
+    }
+
+    .icon_right {
+      float: right;
+    }
+
+    .icon_right button {
+      width: 40px;
+      height: 40px;
+      background-color: white;
+      border: none;
+    }
+
+    .icon_right img {
+      cursor: pointer;
+      width: 24px;
+      height: 24px;
+    }
+
+    /* 피드 footer */
+    .like {
+      margin: 0px 0px 8px;
+      padding: 0 16px;
+      vertical-align: middle;
+    }
+
+    .like img {
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+      padding-right: 5px;
+      vertical-align: middle;
+    }
+
+    .like strong {
+      cursor: pointer;
+    }
+
+    .hashtag {
+      padding: 5px 2px 6px 16px;
+    }
+
+    .hashtag strong {
+      cursor: pointer;
+    }
+
+    .hashtag span {
+      cursor: pointer;
+      color: rgb(55, 97, 137);
+    }
+
+    .comments {
+      padding: 0 16px;
+    }
+
+    .comments button {
+      cursor: pointer;
+      color: grey;
+      display: block;
+      background-color: white;
+      border: none;
+      padding: 0;
+      margin: 0 0 8px;
+    }
+
+    .comments strong {
+      cursor: pointer;
+    }
+
+    .comments_time {
+      font-size: 10px;
+      color: grey;
+      padding: 0 0 0 16px;
+      margin: 4px 0 4px;
+    }
+
+    /* 댓글 달기 */
+    .textarea {
+      height: 56px;
+      margin: 10px 0 0;
+      padding: 0 16px;
+      border-top: 1.5px solid rgb(235, 235, 235);
+      border-radius: 4px;
+    }
+
+    .textarea input {
+      display: inline;
+      width: 540px;
+      height: 18px;
+      font-size: 14px;
+      border: none;
+      color: grey;
+      margin-top: 15px;
+    }
+
+    #submit {
+      cursor: pointer;
+      width: 36px;
+      color: rgb(0, 233, 252);
+      background: white;
+    }
+
+    #bodycheck {
+      width: 100%;
+      height: 1000vh;
+      margin: 0;
+      display: none;
+      z-index: 1;
+      position: absolute;
+    }
+
+    #more {
+      display: none;
+      z-index: 2;
+      margin: 200px 35%;
+      position: absolute;
+      position: fixed;
+    }
+
+    .more_top {
+      z-index: 2;
+      background-color: white;
+      display: block;
+      width: 400px;
+      height: 48px;
+      border-bottom: 0.2px solid #efefef;
+
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+    }
+
+    .more_middle {
+      z-index: 2;
+      background-color: white;
+      display: block;
+      width: 400px;
+      height: 48px;
+      border-bottom: 0.2px solid #efefef;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+    }
+
+    .more_bottom {
+      z-index: 2;
+      background-color: white;
+      display: block;
+      width: 400px;
+      height: 48px;
+      border-width: 0px;
+      border-bottom: 0.2px solid #efefef;
+
+      border-bottom-left-radius: 12px;
+      border-bottom-right-radius: 12px;
+    }
+  </style>
+
+
+</head>
+
+
+<body>
+
+  <div id="bodycheck" onclick="bodyclick()"></div>
+
+  <div id="more">
+    <button class="more_top" style="color:red">부적절한 콘텐츠 신고</button>
+    <button class="more_middle" style="color:red">팔로우 취소</button>
+    <button class="more_middle">게시물로 이동</button>
+    <button class="more_middle">퍼가기</button>
+    <button class="more_middle">공유하기</button>
+    <button class="more_middle">링크 복사하기</button>
+    <button onclick="alert()" class="more_bottom">취소</button>
+  </div>
+
+  <div id="blackOpacity">
+    <nav class="bar">
+      <div class="bar_contents">
+        <div class="insta_logo">
+          <a href="">
+            <div id="insta_logo_png"> </div>
+          </a>
+          <div id="insta_logo_hrizon"> </div>
+          <a href="">
+            <div id="insta_logo"> </div>
+          </a>
+        </div>
+        <div class="find_text">
+          <input id="TextFind" tpye="text" placeholder="검색" onclick="changeTextFind()" onblur="changeTextFind()" />
+        </div>
+        <div class="bar_logoes">
+          <img src="img/find.png" />
+          <img src="img/like.png" />
+          <a href="profile.html"><img src="img/profile.png" /></a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <ul id="slider">
+        <!-- 자바스크립트 feed 반복문 -->
+      </ul>
+    </div>
+
+  </div>
+</body>
+
+
+<script>
+  var imgs = ['img/photo0.png', 'img/photo1.png', 'img/photo2.png'];
+  var title = ['hiliterecords', 'aomgofficial', '1llionaire_records'];
+  var id = ['jun094', 'cwd094', 'khy1234'];
+  var title_comment = ['레디가 출연하는 #힙플쇼 Vol. 56의 예매가 오늘 오후 7시 멜론티켓을 통해 진행됩니다.',
+    '[JAY PARK x YULTRON]',
+    '05/30 신곡'
+  ];
+  var html = `<li class="feed">
+    <div class="feed_header">
+      <span class="feed_header_profile">
+        <img src="https://scontent-icn1-1.cdninstagram.com/vp/1add49d3e51a48729bf717b7f32362d3/5D3D4ADA/t51.2885-19/s150x150/29740159_203573343571562_7949237046097215488_n.jpg?_nc_ht=scontent-icn1-1.cdninstagram.com" />
+        <a title="kozypop" href="https://www.instagram.com/kozypop/">kozypop</a>
+      </span>
+      <span id="moreclick"> <img id="feed_header_more" src="img/more.png" onclick="alert()" /></span>
+
+    </div>
+
+    <div class="photo">
+      <img src="img/photo.jpg" />
+    </div>
+
+    <div class="icon">
+      <span class="icon_left">
+        <button><img src="img/like.png" /></button>
+        <button><img src="img/comment.png" /></button>
+        <button><img src="img/share.png" /></button>
+      </span>
+      <span class="icon_right"><button><img src="img/save.png" /></button></span>
+    </div>
+
+    <div class="feed_footer">
+      <div class="like">
+        <img src="https://scontent-icn1-1.cdninstagram.com/vp/39111654ea70fa7b97d619408188bc65/5D3BD96A/t51.2885-19/s150x150/18723067_212900799227461_3198872430672084992_a.jpg?_nc_ht=scontent-icn1-1.cdninstagram.com" />
+        <strong> huckleberryp84</strong>님 <strong>외 1,036명</strong>이 좋아합니다.
+      </div>
+      <div class="hashtag">
+        <strong>kozypop</strong> 월요일은 밝은 노래로🖼 Taeb2 - Precious (prod. Noden) <br />
+        <span>#nowplaying #soundclod #사운드클라우드</span>
+      </div>
+      <div class="comments">
+        <button>댓글 132개 모두 보기</button>
+        <text><strong>r_n_014</strong> legendary three <br /></text>
+        <text><strong>jingjind</strong> 真的！！！羡慕了</text>
+      </div>
+
+      <div class="comments_time">
+        35분 전
+      </div>
+      <div class="textarea">
+        <form>
+          <input type="text" placeholder="댓글 달기..." />
+          <input id="submit" type="submit" value="게시" />
+        </form>
+      </div>
+    </div>
+  </li>`;
+
+  for (var i = 0; i < 3; i++) {
+    html += `<li class="feed">
+      <div class="feed_header">
+        <span class="feed_header_profile">
+          <img src= "https://scontent-icn1-1.cdninstagram.com/vp/1add49d3e51a48729bf717b7f32362d3/5D3D4ADA/t51.2885-19/s150x150/29740159_203573343571562_7949237046097215488_n.jpg?_nc_ht=scontent-icn1-1.cdninstagram.com"/>
+          <a title="${title[i]}" href="https://www.instagram.com/kozypop/">${title[i]}</a>
+        </span>
+        <span id="moreclick"> <img id="feed_header_more" src="img/more.png" onclick="alert()" /></span>
+
+      </div>
+
+      <div class="photo">
+        <img src="${imgs[i]}" />
+      </div>
+
+      <div class="icon">
+        <span class="icon_left">
+          <button><img src="img/like.png" /></button>
+          <button><img src="img/comment.png" /></button>
+          <button><img src="img/share.png" /></button>
+        </span>
+        <span class="icon_right"><button><img src="img/save.png" /></button></span>
+      </div>
+
+      <div class="feed_footer">
+        <div class="like">
+          <img src="https://scontent-icn1-1.cdninstagram.com/vp/39111654ea70fa7b97d619408188bc65/5D3BD96A/t51.2885-19/s150x150/18723067_212900799227461_3198872430672084992_a.jpg?_nc_ht=scontent-icn1-1.cdninstagram.com" />
+          <strong> ${id[i]}</strong>님 <strong>외 1,036명</strong>이 좋아합니다.
+        </div>
+        <div class="hashtag">
+          <strong>${title[i]}</strong> ${title_comment[i]}
+        </div>
+
+        <div class="textarea">
+          <form>
+            <input type="text" placeholder="댓글 달기..." />
+            <input id="submit" type="submit" value="게시" />
+          </form>
+        </div>
+      </div>
+    </li>`;
+  }
+  document.getElementById('slider').innerHTML = html;
+
+
+
+  function changeTextFind() {
+    var textfindChange = document.getElementById("TextFind");
+
+    if (textfindChange.style.backgroundColor == 'white') {
+      textfindChange.style.backgroundColor = '#fcf7f7';
+      textfindChange.style.textAlign = 'center';
+    } else {
+      textfindChange.style.backgroundColor = 'white';
+      textfindChange.style.textAlign = 'left';
+    }
+  }
+
+  function alert() {
+    var changeBody = document.getElementById("bodycheck");
+    var click_more = document.getElementById("more");
+
+    if (click_more.style.display == 'block') {
+      click_more.style.display = 'none';
+      changeBody.style.opacity = '1';
+      changeBody.style.display = 'none';
+    } else {
+      click_more.style.display = 'block';
+      changeBody.style.backgroundColor = 'rgba(153, 149, 149, 0.7)';
+      changeBody.style.display = 'block';
+    }
+  }
+
+  function bodyclick() {
+    var changeBody = document.getElementById("blackOpacity");
+    var click_mor = document.getElementById("more");
+    var bodyC = document.getElementById("bodycheck");
+
+    if (click_mor.style.display == 'block') {
+      bodyC.style.display = 'none';
+      click_mor.style.display = 'none';
+      changeBody.style.opacity = '1';
+    }
+  }
+</script>
+
+</html>

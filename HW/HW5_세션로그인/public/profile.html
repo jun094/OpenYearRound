@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="css/profile.css" />
+</head>
+
+<body>
+  <div id="modal">
+    <div id="black" onclick="modal_img()"></div>
+    <div id="modal-img"></div>
+  </div>
+  </div>
+  <!-- 상단 바 -->
+  <div class="bar">
+    <div class="bar_contents">
+      <div class="insta_logo">
+        <a href="main.html">
+          <div id="insta_logo_png"> </div>
+        </a>
+        <div id="insta_logo_hrizon"> </div>
+        <a href="main.html">
+          <div id="insta_logo"> </div>
+        </a>
+      </div>
+      <div class="find_text">
+        <input id="TextFind" tpye="text" placeholder="검색" onclick="changeTextFind()" onblur="changeTextFind()" />
+      </div>
+      <div class="bar_logoes">
+        <img src="img/find.png" />
+        <img src="img/like.png" />
+        <img src="img/profile.png" />
+      </div>
+    </div>
+  </div>
+
+
+  <div class="main">
+    <header>
+      <div class="profile_left">
+        <img src="img/profile.jpg" />
+      </div>
+
+      <div class="profile_right">
+        <div class="id">
+          <h1>jying_94</h1>
+          <input type="button" value="프로필 편집" />
+          <img src="img/edit.png" />
+        </div>
+
+        <div class="info">
+          게시물&nbsp;<strong>5</strong>
+          팔로워&nbsp;<strong>152</strong>
+          팔로우&nbsp;<strong>194</strong>
+        </div>
+
+        <div class="name"><strong>최준영</strong></div>
+        <div class="name">openyearround</div>
+      </div>
+
+    </header>
+
+    <div class="post">
+      <div class="category">
+        <span><img src="img/post.png" />게시물</span>
+        <span><img src="img/igtv.png" />IGTV</span>
+        <span><img src="img/save2.png" />저장됨</span>
+        <span><img src="img/tag.png" />태그됨</span>
+      </div>
+
+      <div id="photoLine">
+        <!-- 반복문출력 -->
+      </div>
+
+    </div>
+  </div>
+
+
+
+</body>
+
+<script src="js/profile.js">
+</script>
+
+</html>

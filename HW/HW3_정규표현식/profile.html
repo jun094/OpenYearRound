@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+
+      /* 상단 바 */
+      .bar {
+        position: fixed;
+        top: 0;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 77px;
+        background-color: white;
+        border-bottom: 1.5px solid rgb(235, 235, 235);
+        border-radius: 4px;
+      }
+
+      .bar_contents {
+        margin: 0 auto;
+        max-width: 1010px;
+
+        /* width: 990px; */
+        padding: 26px 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+
+      .insta_logo {
+        display: flex;
+        float: left;
+      }
+
+      #insta_logo_png {
+        cursor: pointer;
+        display: flex;
+        width: 24px;
+        height: 24px;
+        background-image: url("img/instagram-logo.png");
+        background-size: cover;
+        margin: 0;
+        padding: 0;
+      }
+
+      #insta_logo_hrizon {
+        display: block;
+        border-right: 0.5px solid black;
+        width: 24px;
+        height: 24px;
+      }
+
+      #insta_logo {
+        cursor: pointer;
+        display: block;
+        margin-left: 15px;
+        width: 103px;
+        height: 29px;
+        background-image: url("img/instagram.png");
+        background-size: cover;
+      }
+
+      .find_text {
+        display: block;
+        text-align: center;
+      }
+
+      #TextFind {
+        width: 199px;
+        height: 18px;
+        border-radius: 3px;
+        border: 0.5px solid #EFEFEF;
+        background-color: #fcf7f7;
+        color: #999999;
+        text-align: center;
+        font-size: 14px;
+      }
+
+      .bar_logoes {
+        text-align: center;
+        display: inline;
+
+      }
+
+      .bar_logoes img {
+        cursor: pointer;
+        width: 24px;
+        height: 24px;
+        margin-left: 24px;
+        float: right;
+      }
+
+      /* main부분 */
+      .main{
+        padding : 120px 20px 0px;
+        margin: 0 auto 30px;
+        max-width: 935px;
+      }
+
+      /* header 프로필 부분 */
+      header{
+        margin: 0 0 44px;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+      }
+      .profile_left{
+        height:150px;
+        text-align: center;
+        margin: 0 30px 0 0;
+      }
+      .profile_left img{
+        width:150px;
+        height: 150px;
+        border-radius: 100px;
+      }
+
+
+      .id{
+        margin : 0 0 20px;
+        height: 40px;
+      }
+      .id h1{
+        height: 32px;
+        display: inline;
+        vertical-align: middle;
+        margin-right: 20px;
+        font-size: 23px;
+      }
+      .id input{
+        display: inline;
+        margin-right: 20px;
+        vertical-align: middle;
+        height: 30px;
+        font-weight: bold;
+        font-size: 14px;
+        background-color: white;
+        border: 1px solid #dbdbdb;
+        border-radius: 5px;
+      }
+      .id img{
+        margin-right: 20px;
+        display: inline;
+        width: 24px;
+        height: 24px;
+        vertical-align: middle;
+      }
+
+      .info {
+        margin : 0 0 20px;
+      }
+      .info strong{
+        margin-right: 25px;
+      }
+      .name{
+        font-size: 16px;
+      }
+
+
+      /* 카테고리 */
+      .post{
+        text-align: center;
+      }
+      .category{
+        height: 53px;
+        border-top: 1px solid #efefef;
+        color:#999;
+        font-size: 12px;
+        text-align: center;
+      }
+      .category span{
+        margin-right: 50px;
+        display: inline-block;
+        line-height:53px;
+        font-weight: bold;
+        /* border-top: 1px solid black; */
+        /* 이거 자바스크립트로 넣어보기 */
+      }
+      .category img{
+        width: 12px;
+        height: 12px;
+        margin-right: 6px;
+      }
+
+      .photoLine{
+        text-align: left;
+      }
+      #photo{
+
+        float : left;
+      }
+      #photo img{
+        margin-right:10px;
+        margin-bottom: 20px;
+        width: 293px;
+        height: 293px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 상단 바 -->
+    <nav class="bar">
+      <div class="bar_contents">
+        <div class="insta_logo">
+          <a href="">
+            <div id="insta_logo_png"> </div>
+          </a>
+          <div id="insta_logo_hrizon"> </div>
+          <a href="">
+            <div id="insta_logo"> </div>
+          </a>
+        </div>
+        <div class="find_text">
+          <input id="TextFind" tpye="text" placeholder="검색" onclick="changeTextFind()" onblur="changeTextFind()" />
+        </div>
+        <div class="bar_logoes">
+          <img src="img/find.png" />
+          <img src="img/like.png" />
+          <img src="img/profile.png" />
+        </div>
+      </div>
+    </nav>
+
+
+    <div class="main">
+      <header>
+        <div class="profile_left">
+          <img src="img/profile.jpg" />
+        </div>
+
+        <div class="profile_right">
+          <div class="id">
+            <h1>jying_94</h1>
+            <input type="button" value="프로필 편집" />
+            <img src="img/edit.png" />
+          </div>
+
+          <div class="info">
+            게시물&nbsp;<strong>5</strong>
+            팔로워&nbsp;<strong>152</strong>
+            팔로우&nbsp;<strong>194</strong>
+          </div>
+
+          <div class="name"><strong>최준영</strong></div>
+          <div class="name">openyearround</div>
+        </div>
+
+      </header>
+
+      <div class="post">
+        <div class="category">
+          <span><img src="img/post.png" />게시물</span>
+          <span><img src="img/igtv.png" />IGTV</span>
+          <span><img src="img/save2.png" />저장됨</span>
+          <span><img src="img/tag.png" />태그됨</span>
+        </div>
+
+        <div class="photoLine">
+          <div id="photo">
+            <!-- <img src="img/photo2.png" /> -->
+          </div>
+        </div>
+
+      </div>
+
+      <footer>
+      </footer>
+    </div>
+  </body>
+
+  <script>
+    var imgs = ['img/photo.jpg','img/photo0.png', 'img/photo1.png', 'img/photo2.png'];
+    var html =" ";
+
+    for(var j=0;j<imgs.length;j++)
+    {
+      html+=`<img src="${imgs[j]}" />`;
+    }
+    document.getElementById('photo').innerHTML = html;
+  </script>
+</html>

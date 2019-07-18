@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>instagram_jun</title>
+  <style>
+    html,
+    body {
+      width: 992px;
+      margin: 0 auto;
+      background-color: rgb(245, 245, 245);
+      text-align: center;
+    }
+
+
+    #outside {
+      background-color: rgb(245, 245, 245);
+      margin: 30px 0px 0px;
+      padding: 0px 0px 44px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    #footer {
+      margin-bottom: 30px;
+    }
+
+
+    .iphone-back-image {
+      background-image: url("https://www.instagram.com/static/images/homepage/home-phones.png/43cc71bb1b43.png");
+      width: 450px;
+      height: 620px;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin: 80px 15px 0px 35px;
+    }
+
+    .iphone-front-image {
+      position: absolute;
+
+    }
+
+    .iphone-front-image img {
+      position: absolute;
+      left: 149px;
+      top: 100px;
+    }
+
+    .article1 {
+      display: block;
+      background-color: rgb(255, 255, 255);
+      text-align: center;
+      border: 2px solid #EFEFEF;
+      width: 350px;
+      height: 561px;
+      margin: 10px 0px 10px;
+      padding: 10px 0px;
+    }
+
+    #logo {
+      text-align: center;
+      font-size: 20px;
+      width: 175px;
+      height: 51px;
+      margin: 22px 86px 12px;
+
+      font-size: 14px;
+    }
+
+    #ment1 h2 {
+      text-align: center;
+      width: 268px;
+      height: 40px;
+      margin: 0px 40px 10px;
+
+      font-size: 17px;
+      color: #999999;
+    }
+
+    .facebook-button {
+      cursor: pointer;
+      width: 268px;
+      height: 31px;
+      background-color: #3897F0;
+      margin: 10px;
+      padding: 0;
+      border-radius: 5px;
+      border: 0px;
+      padding: 5px 9px;
+    }
+
+    .facebook-button img {
+      width: 16px;
+      height: 16px;
+      margin-right: 10px;
+      display: inline;
+    }
+
+    .facebook-button p {
+
+      color: white;
+      font-size: 14px;
+      display: inline;
+    }
+
+
+    #or {
+      width: 268px;
+      height: 14px;
+      margin: 10px 40px 18px;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1.5fr;
+    }
+
+    #or p {
+      display: inline;
+      color: #999999;
+      font-size: 13px;
+      margin: 0px 18px;
+    }
+
+    #hr {
+      border-top: 1px solid #EFEFEF;
+      margin-top: 7px;
+    }
+
+    #input-css {
+      margin-bottom: 10px;
+    }
+
+    #input-css input {
+      width: 268px;
+      height: 38px;
+      border-radius: 5px;
+      border: 1px solid #EFEFEF;
+      background-color: #FAFAFA;
+      color: gray;
+
+      font-size: 11px;
+    }
+
+    #login-button {
+      cursor: pointer;
+      margin: 10px;
+      width: 268px;
+      height: 31px;
+      background-color: #3897F0;
+      padding: 5px 9px;
+      border-radius: 5px;
+      border: 0px;
+      font-size: 14px;
+    }
+
+    #login-button p {
+      font-size: 14px;
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+
+    #ment2 {
+      margin: 10px 60px;
+    }
+
+    #ment2 p {
+      color: #999999;
+      font-size: 14px;
+    }
+
+    #ment2 a {
+      text-decoration: none;
+      color: rgb(145, 145, 145);
+    }
+
+    .article2 {
+      display: block;
+      background-color: rgb(255, 255, 255);
+      text-align: center;
+      border: 1px solid #EFEFEF;
+      width: 350px;
+      height: 50px;
+      margin: 0px 0px 10px;
+      padding: 10px 0px;
+    }
+
+    .article2 p {
+      font-size: 14px;
+    }
+
+    .article2 a {
+      color: blue;
+      text-decoration: none;
+    }
+
+
+    .article3 {
+
+      width: 350px;
+      height: 101px;
+      text-align: center;
+    }
+
+    #down-img {
+      display: -webkit-flex;
+      /* Safari */
+      display: flex;
+      justify-content: center;
+      width: 350px;
+      margin: 0px auto;
+    }
+
+    #down-img img {
+      cursor: pointer;
+      height: 40px;
+      margin: 10px 5px;
+    }
+
+
+
+    #footer-menu {
+      font-size: 12px;
+      color: #003569;
+      float: left;
+      padding-left: 20px;
+    }
+
+    #footer-menu a:link {
+      text-decoration: none;
+    }
+
+    #footer-menu select {
+      display: inline;
+      /* 네이티브 외형 감추기 */
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      font-size: 12px;
+      color: #003569;
+      border: none;
+      background-color: rgb(245, 245, 245);
+    }
+
+    #footer-copyright {
+      font-size: 12px;
+      color: gray;
+      padding-right: 20px;
+      float: right;
+    }
+
+    @media(max-width:800px) {
+
+      html,
+      body {
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      #outside {
+        display: block;
+
+      }
+
+      .article1 {
+        margin: 10px auto;
+      }
+
+      .article2 {
+        margin: 10px auto;
+      }
+
+      .article3 {
+        margin: 10px auto;
+      }
+
+      .left {
+        display: none;
+      }
+
+
+      #footer-menu {
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      #footer-copyright {
+        font-size: 12px;
+        color: gray;
+        padding-right: 20px;
+        float: none;
+      }
+    }
+  </style>
+  <script>
+    var check = 0;
+
+    function verify_email() {
+      // 이메일 & 휴대폰 번호 검증
+      var emailValId = document.getElementById("email");
+      var regExp1 = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+      var regExp2 = /01[01]\D?\d{4}\D?\d{4}/;
+
+      // 이메일 & 휴대폰 번호 검증
+      if (emailValId.value.match(regExp1) != null || emailValId.value.match(regExp2) != null) {
+        emailValId.style.borderColor = 'green';
+        emailValId.style.color = 'black';
+        check++;
+      } else if (emailValId.value.match(regExp1) == null || emailValId.value.match(regExp2) == null) {
+        emailValId.style.borderColor = 'red';
+        emailValId.style.color = 'red';
+      }
+    };
+
+    function verify_name() {
+
+      var nameValId = document.getElementById("name");
+      var regExpExtra = /\w/;
+      var regExpExtra2 = /[가-힣ㄱ-ㅎㅏ-ㅣa-zA-Z0-9]/gi; // 한글도 가능
+
+      //이름은 한글도 가능
+      if (nameValId.value.match(regExpExtra) != null || nameValId.value.match(regExpExtra2) != null ) {
+        nameValId.style.borderColor = 'green';
+        nameValId.style.color = 'black';
+        check++;
+      } else {
+        nameValId.style.borderColor = 'red';
+        nameValId.style.color = 'red';
+      }
+    };
+
+    function verify_userid() {
+      var useridValId = document.getElementById("userid");
+      var regExpExtra = /\w/;
+      if (useridValId.value.match(regExpExtra) != null) {
+        useridValId.style.borderColor = 'green';
+        useridValId.style.color = 'black';
+        check++;
+      } else {
+        useridValId.style.borderColor = 'red';
+        useridValId.style.color = 'red';
+      }
+    };
+
+    function verify_pw() {
+
+      var pwValId = document.getElementById("pw");
+      var regExpExtra = /\w/;
+
+      if (pwValId.value.match(regExpExtra) != null) {
+        pwValId.style.borderColor = 'green';
+        pwValId.style.color = 'black';
+        check++;
+      } else {
+        pwValId.style.borderColor = 'red';
+        pwValId.style.color = 'red';
+      }
+    };
+
+    function login() {
+      var emailValId = document.getElementById("email");
+      var nameValId = document.getElementById("name");
+      var useridValId = document.getElementById("userid");
+      var pwValId = document.getElementById("pw");
+
+      if (check == 4) {
+        alert('번호 또는 이메일 : ' + emailValId.value +'\n성명 : ' + nameValId.value +'\n사용자 이름 : ' + useridValId.value);
+        //document.location.href="main.jsp"
+      } else {
+        alert('모든 양식을 채워주세요 !');
+      }
+    };
+  </script>
+</head>
+
+<body>
+  <div id="main">
+    <div id="outside">
+      <div class="left">
+        <div class="iphone-back-image">
+          <div class="iphone-front-image">
+            <img src="https://www.instagram.com/static/images/homepage/screenshot3.jpg/f0c687aa6ec2.jpg" />
+          </div>
+        </div>
+      </div>
+
+
+      <div class="right">
+        <div class="article1">
+          <div id="logo">
+            <img src="img/instagram.png" />
+          </div>
+
+          <div id="ment1">
+            <h2>친구들의 사진과 동영상을 보려면 가입하세요.</h2>
+          </div>
+
+
+          <button class="facebook-button">
+            <img src="img/facebook.png" />
+            <p>
+              Facebook으로 로그인
+            </p>
+          </button>
+
+          <div id="or">
+            <span id="hr"></span>
+            <p> 또는 </p>
+            <span id="hr"></span>
+          </div>
+
+          <form>
+            <div id="input-css">
+              <input id="email" onblur="verify_email()" type="text" placeholder="  휴대폰 번호 또는 이메일 주소 " /><br>
+            </div>
+            <div id="input-css">
+              <input id="name" onblur="verify_name()" type="text" placeholder="  성명" /><br>
+            </div>
+            <div id="input-css">
+              <input id="userid" onblur="verify_userid()" type="text" placeholder="  사용자 이름" /><br>
+            </div>
+            <div id="input-css">
+              <input id="pw" onblur="verify_pw()" type="password" placeholder="  비밀번호" /><br>
+            </div>
+
+            <button id="login-button" onclick="login()">
+              <p>가입</p>
+            </button>
+          </form>
+
+
+          <div id="ment2">
+            <p>
+              가입하면 Instagram의
+              <a href="https://help.instagram.com/581066165581870" target="_blank"><strong>약관</strong></a>,
+              <a href="https://help.instagram.com/519522125107875" target="_blank"><strong>데이터</strong></a><br />
+              <a href="https://help.instagram.com/519522125107875" target="_blank"><strong>정책</strong></a> 및
+              <a href="https://help.instagram.com/1896641480634370?ref=ig" target="_blank"><strong>쿠키 정책</strong></a>에 동의하게 됩니<br />다.
+            </p>
+          </div>
+        </div>
+
+
+        <div class="article2">
+          <p>
+            계정이 있으신가요?
+            <a href="https://www.instagram.com/accounts/login/?source=auth_switcher" target="_blank">로그인</a>
+          </p>
+        </div>
+
+
+        <div class="article3">
+          <p>
+            앱을 다운로드하세요.
+          </p>
+          <span id="down-img"><img src="https://www.instagram.com/static/images/appstore-install-badges/badge_ios_korean-ko.png/4a5c9d62d51b.png" />
+            <img src="https://www.instagram.com/static/images/appstore-install-badges/badge_android_korean-ko.png/f155b664a93b.png" />
+            <img src="https://www.instagram.com/static/images/appstore-install-badges/badge_microsoft_korean-ko.png/104f45597230.png" /></span>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="footer">
+      <div id="footer-menu">
+        <a href="https://www.instagram.com/about/us/">INSTAGRAM 정보&nbsp;&nbsp;&nbsp;</a>
+        <a href="https://help.instagram.com/">지원&nbsp;&nbsp;&nbsp;</a>
+        <a href="https://instagram-press.com/">홍보 센터&nbsp;&nbsp;&nbsp;</a>
+        <a href="https://www.instagram.com/developer/">API&nbsp;&nbsp;&nbsp;</a>
+        <a href="https://www.instagram.com/about/jobs/">채용정보&nbsp;&nbsp;&nbsp;</a>
+        <a href="https://help.instagram.com/519522125107875">개인정보처리방침&nbsp;&nbsp;&nbsp;</a>
+        <a href="https://help.instagram.com/581066165581870">약관&nbsp;&nbsp;&nbsp;</a>
+        <a href="https://www.instagram.com/explore/locations/">디렉터리&nbsp;&nbsp;&nbsp;</a>
+        <a href="https://www.instagram.com/directory/profiles/">프로필&nbsp;&nbsp;&nbsp;</a>
+        <a href="https://www.instagram.com/directory/hashtags/">해시태그&nbsp;&nbsp;&nbsp;</a>
+
+        <select class="언어" name="언어">
+          <option value="" disabled selected>언어</option>
+          <option value="한국어">한국어</option>
+          <option value="English">영어</option>
+          <option value="France">불어</option>
+        </select>
+      </div>
+
+      <sapn id=footer-copyright>© 2019 INSTAGRAM</sapn>
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>

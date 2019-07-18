@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>instagram_jun</title>
+  <link rel="stylesheet" href="css/index.css" />
+
+</head>
+
+<body>
+  <div id="main">
+    <div id="outside">
+      <div class="left">
+        <div class="iphone-back-image">
+          <div class="iphone-front-image">
+            <img src="https://www.instagram.com/static/images/homepage/screenshot3.jpg/f0c687aa6ec2.jpg" />
+          </div>
+        </div>
+      </div>
+
+
+      <div class="right">
+        <div class="article1">
+          <div id="logo">
+            <img src="img/instagram.png" />
+          </div>
+
+          <div id="ment1">
+            <h2>친구들의 사진과 동영상을 보려면 가입하세요.</h2>
+          </div>
+
+
+          <button class="facebook-button">
+            <img src="img/facebook.png" />
+            <p>
+              Facebook으로 로그인
+            </p>
+          </button>
+
+          <div id="or">
+            <span id="hr"></span>
+            <p> 또는 </p>
+            <span id="hr"></span>
+          </div>
+
+          <form>
+            <div id="input-css">
+              <input id="email" onchange = "verify(this)"  type="text" placeholder="  휴대폰 번호 또는 이메일 주소 " /><br>
+            </div>
+            <div id="input-css">
+              <input id="name" onchange = "verify(this)" type="text" placeholder="  성명" /><br>
+            </div>
+            <div id="input-css">
+              <input id="userid" onchange = "verify(this)"type="text" placeholder="  사용자 아이디" /><br>
+            </div>
+            <div id="input-css">
+              <input id="pw" onchange = "verify(this)" type="password" placeholder="  비밀번호" /><br>
+            </div>
+
+            <input  id="login-button" type="button" value="가입" onclick="login()"> </input>
+          </form>
+
+
+          <div id="ment2">
+            <p>
+              가입하면 Instagram의
+              <a href="https://help.instagram.com/581066165581870" target="_blank"><strong>약관</strong></a>,
+              <a href="https://help.instagram.com/519522125107875" target="_blank"><strong>데이터</strong></a><br />
+              <a href="https://help.instagram.com/519522125107875" target="_blank"><strong>정책</strong></a> 및
+              <a href="https://help.instagram.com/1896641480634370?ref=ig" target="_blank"><strong>쿠키 정책</strong></a>에 동의하게 됩니<br />다.
+            </p>
+          </div>
+        </div>
+
+
+        <div class="article2">
+          <p>
+            계정이 있으신가요?
+            <a href="https://www.instagram.com/accounts/login/?source=auth_switcher" target="_blank">로그인</a>
+          </p>
+        </div>
+
+
+        <div class="article3">
+          <p>
+            앱을 다운로드하세요.
+          </p>
+          <span id="down-img"><img src="https://www.instagram.com/static/images/appstore-install-badges/badge_ios_korean-ko.png/4a5c9d62d51b.png" />
+            <img src="https://www.instagram.com/static/images/appstore-install-badges/badge_android_korean-ko.png/f155b664a93b.png" />
+            <img src="https://www.instagram.com/static/images/appstore-install-badges/badge_microsoft_korean-ko.png/104f45597230.png" /></span>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="footer">
+      <div id="footer-menu">
+        <a href="https://www.instagram.com/about/us/">INSTAGRAM 정보&nbsp;&nbsp;&nbsp;</a>
+        <a href="https://help.instagram.com/">지원&nbsp;&nbsp;&nbsp;</a>
+        <a href="https://instagram-press.com/">홍보 센터&nbsp;&nbsp;&nbsp;</a>
+        <a href="https://www.instagram.com/developer/">API&nbsp;&nbsp;&nbsp;</a>
+        <a href="https://www.instagram.com/about/jobs/">채용정보&nbsp;&nbsp;&nbsp;</a>
+        <a href="https://help.instagram.com/519522125107875">개인정보처리방침&nbsp;&nbsp;&nbsp;</a>
+        <a href="https://help.instagram.com/581066165581870">약관&nbsp;&nbsp;&nbsp;</a>
+        <a href="https://www.instagram.com/explore/locations/">디렉터리&nbsp;&nbsp;&nbsp;</a>
+        <a href="https://www.instagram.com/directory/profiles/">프로필&nbsp;&nbsp;&nbsp;</a>
+        <a href="https://www.instagram.com/directory/hashtags/">해시태그&nbsp;&nbsp;&nbsp;</a>
+
+        <select class="언어" name="언어">
+          <option value="" disabled selected>언어</option>
+          <option value="한국어">한국어</option>
+          <option value="English">영어</option>
+          <option value="France">불어</option>
+        </select>
+      </div>
+
+      <sapn id=footer-copyright>© 2019 INSTAGRAM</sapn>
+
+    </div>
+
+  </div>
+
+</body>
+<script src="js/index.js"></script>
+</html>
