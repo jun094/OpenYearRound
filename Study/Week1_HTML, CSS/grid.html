@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      div{
+        border : 5px solid gray;
+      }
+      #grid{
+        border:5px solid pink;
+        display: grid; /* div는 block용이므로 한칸을 차지 그러나 grid는 유동적 사용 가능 */
+        grid-template-columns: 1fr 3fr; /*그리드는 밑에 template와 함께 사용해야 효과를 바루히*/
+
+      }
+    </style>
+    </head>
+
+
+  <body>
+    <!-- 아무런 목적이 없는 디자인 용도로하는 태그들
+    block용 -> div
+    inline용-> span  -->
+    <div id="grid">
+      <div> navigation </div>
+      <div> articlearticlearticlearticlearticlearticlearticlearticle
+      articlearticlearticlearticlearticlearticlearticlearticlearticle
+    articlearticlearticlearticlearticlearticlearticlearticlearticlearticle </div>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <!-- 객체 : 순서가 없는 배열 -->
+    <script>
+      var coworkers = {
+        "korean" : "최준영",
+        "japaneses" : "기무라"
+      };
+      document.write("korean : " + coworkers.korean + "<br />");
+      document.write("japaneses : " + coworkers.japaneses + "<br />");
+
+      coworkers.france = "봉주르";
+      coworkers["america people"] = "마이클";
+      // 띄어쓰기 포함하고 싶을때
+
+      document.write("france : " + coworkers.france + "<br />");
+      document.write("america people : " + coworkers["america people"] + "<br />");
+      document.write("<br /><br />");
+
+      // 객체에서의 반복문
+      // 여기서 key값은 korean, japaneses, ...
+      for(var key in coworkers){
+        document.write(key + " : " + coworkers[key] + "<br />");
+      }
+    </script>
+
+
+    <h2>Property & Method</h2>
+    <p> 객체(coworkers)에는 함수도 담을 수 있다..! </p>
+    <script>
+        // function showAll(){ } 이거를 객체 안에 넣는거다.!
+      coworkers.showAll = function(){
+        for(var key in this){
+          if(key == showAll) { break; }
+          // document.write(key + " : " + coworkers[key] + "<br />");
+          // 만약, 위에 coworkers가 이름이 바뀐다면? -> 여기도 다 바꿔줘야함..!
+          // -> this를 사용하자 !
+          document.write(key + " : " + this[key] + "<br />");
+        }
+      }
+
+      coworkers.showAll();
+    </script>
+
+
+    <h1>정리</h1>
+    <p>
+     객체에 소속된 함수 (showALL) : 메소드 <br />
+     객체에 소속된 변수 (korean, japaneses, .. ) : property
+    </p>
+  </body>
+</html>

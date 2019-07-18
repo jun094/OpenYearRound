@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+<ul>
+    <li>HTML</li>
+    <li id="active">CSS</li>
+    <li>JavaScript</li>
+</ul>
+<script>
+    // 다른 것들과 달리 elments가 아니라 emlment임 --> 하나만 식별 !!!!
+    // 따라서 배열 사용 안함 --> 가장 효율적 --> 이걸 젤 많이 사용
+    var li = document.getElementById('active'); // 하나의 element!!
+    li.style.color='red';
+</script>
+</body>
+</html>

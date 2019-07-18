@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <ul>
+    <li>test2</li>
+  </ul>
+  <ul class="foo">
+    <li>test</li>
+  </ul>
+</body>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script type="text/javascript">
+  //예제 1. jQuery( selector, [context] )
+  (function($) {
+    $('ul.foo').click(function() { //  $('ul.foo') : ul태그 중에 class = foo인 것을 선택
+                                   //  .click : jquery 이벤트 함수 (onclick이랑 같은것)
+      $('li', this).css('background-color', 'red');  // $('li', this) = $('ul.foo')
+    });
+  })(jQuery)
+</script>
+
+
+</html>

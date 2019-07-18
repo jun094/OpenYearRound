@@ -1,0 +1,61 @@
+<html>
+    <head>
+      <style type="text/css">
+          #navigation li {
+              list-style:none;
+              float:left;
+              padding:5px;
+          }
+          #navigation {
+              cursor:pointer;
+          }
+          #navigation .selected {
+              background-color:red;
+              color:white;
+          }
+      </style>
+    </head>
+    <body>
+        <ul id="navigation">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>javascript</li>
+            <li class="selected">jQuery</li>
+            <li>PHP</li>
+            <li>mysql</li>
+        </ul>
+    </body>
+
+    <script type="text/javascript">
+        function addEvent(target, eventType,eventHandler, useCapture) {
+            if (target.addEventListener) { // W3C DOM
+                target.addEventListener(eventType,eventHandler,useCapture?useCapture:false);
+            } else if (target.attachEvent) {  // IE DOM
+                var r = target.attachEvent("on"+eventType, eventHandler);
+            }
+        }
+
+
+        function clickHandler(event) {
+            var nav = document.getElementById('navigation');
+            for(var i = 0; i < nav.childNodes.length; i++) {
+                var child = nav.childNodes[i];
+                if(child.nodeType==3)
+                    continue;
+                child.className = '';
+            }
+            event.target.className = 'selected';
+        }
+        //   addEvent(window, 'load', function(event)) :
+        //     window 객체가 load가 끝났을때 event 함수가 실행된다. -> 무조건 실행되는 함수
+        addEvent(window, 'load', function(eventObj) {
+            var nav = document.getElementById('navigation');
+            for(var i = 0; i < nav.childNodes.length; i++) {
+                var child = nav.childNodes[i];
+                if(child.nodeType==3) // nodeType = 3  : node형태가 빈칸인 형태
+                    continue;
+                addEvent(child, 'click', clickHandler);
+            }
+        })
+    </script>
+</html>

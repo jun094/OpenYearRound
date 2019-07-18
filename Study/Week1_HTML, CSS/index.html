@@ -1,0 +1,132 @@
+<!doctype html>
+<head>
+  <title>WEB1-html</title>
+  <meta charset="utf-8">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-137366096-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-137366096-1');
+</script>
+
+<style>
+  /* 이 style은 태그 */
+  a{
+    /* a와 같은것을 '선택자' (selector) */
+    color : black;
+    /* color : red; 와 같은 것을 '선언' (declaration)*/
+    /* color 와 같은 것을 '속성' (property)*/
+    text-decoration: none;
+  }
+
+  h1{
+    font-size: 60px;
+    text-align: center;
+  }
+
+  .saw{
+    font-size=45px;
+    color:gray;
+  }
+  .active{
+    color:red;
+  }
+
+  #active2{
+    color:blue ;
+  }
+
+  /* 아이디(#) 선택자가 가장 늦게 등장했음에도 불구하고 blue로 색상 변경됨
+     a(태그선택자) 가 가장 먼저 등장했음에도 black으로 안됨
+    --> 선택자 우선순위 : 아이디(#) > 클래스(.) > 태그선택자
+
+   왜??? id는 유일무이함. a태그는 포괄적임 --> 포괄적인 태그에 css를 선택해주고
+                                           그룹짓는것에 클래스 (반)을 선택해주고
+                                            특별한 것에 아이디(학번)을 한번만 선택해준다. */
+</style>
+</head>
+
+<body>
+  <h1><a href="index.html">WEB </a></h1>
+  <h2>
+  <ul>
+    <!-- 클래스는 띄어쓰기로 여러개를 쓸 수 있다. -> 그러나, 좋은 방법이 아니다  -->
+    <li><a href="1.html" target="_blank" title="html" class="saw active" >HTML</a></li>
+    <li><a href="2.html" target="_blank" title="CSS" class="saw" id="active2" >CSS</a></li>
+
+    <li><a href="3.html" target="_blank" title="JAVASCRIPT">JAVASCRIPT</a></li>
+  </ul>
+
+  <br>
+  <p>
+  <iframe width="560" height="315"
+  src="https://www.youtube.com/embed/xF-gEFGnEH8"
+  frameborder="0"
+  allow="accelerometer; autoplay; encrypted-media;
+  gyroscope; picture-in-picture" allowfullscreen>
+  </iframe>
+
+
+  <br />
+  <!-- 댓글기능 -->
+
+
+
+  <!-- 댓글기능 -->
+  <br />
+  </p>
+
+  <ol>
+      <!-- 이 style은 HTML코드의 a태그의 style속성 -->
+    <li style="color:blue;text-decoration:underline">CSS</li>
+    <li>JAVASCRIPT</li>
+    <li>HTML</li>
+  </ol>
+
+  <h1> HTML이란 무엇인가.? </h1>
+
+  <p>안녕하세여</p>
+
+  <img src="eximg.jpg" width="100%"></img>
+
+
+  <div id="disqus_thread"></div>
+  <script>
+  /**
+  *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+  *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+  /*
+  var disqus_config = function () {
+  this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+  };
+  */
+  (function() { // DON'T EDIT BELOW THIS LINE
+  var d = document, s = d.createElement('script');
+  s.src = 'https://web1-ukcph8vjxo.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+  })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<br />
+<br />
+  <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5c9f8beb1de11b6e3b06019f/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+
+</body>
